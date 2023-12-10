@@ -21,7 +21,7 @@
 # APIs Docs.
 
 ### Get Vendor List
-URL: http://127.0.0.1:8000/api/vendor/
+##### URL: http://127.0.0.1:8000/api/vendor/
 Ex: 
   {
     "is_authenticated": false,
