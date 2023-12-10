@@ -175,3 +175,97 @@ Vendor performance:
     },
     "extra_information": {}
 }
+
+
+### 7: Product Order List
+Product Order List:
+##### URL: http://127.0.0.1:8000/api/purchase-orders/
+##### Method: GET
+###### Ex: Response:{
+    "is_authenticated": false,
+    "status": 200,
+    "message": "Producted Order Track List.",
+    "data": [
+        {
+            "po_number": "PO288806588519884503844868458358346557262",
+            "vendor": "kapilfedew",
+            "order_date": "2023-12-06T18:26:40.834813Z",
+            "delivery_date": null,
+            "on_time_delivery_date": null,
+            "items": {
+                "vegitables": [
+                    "Chilly",
+                    "Carrot"
+                ],
+                "electronics_item": [
+                    "computer",
+                    "mouse",
+                    "keyword"
+                ]
+            },
+            "quantity": 10,
+            "status": "canceled",
+            "quality_rating": 7.0,
+            "issue_date": null,
+            "acknowledgment_date": null
+        },
+        {
+            "po_number": "PO213677533588261468457307031548399725343",
+            "vendor": "shubham",
+            "order_date": "2023-12-08T11:15:13.761258Z",
+            "delivery_date": "2023-12-09T14:33:13.761258Z",
+            "on_time_delivery_date": "2023-12-09T14:33:13.761258Z",
+            "items": {
+                "vegitables": [
+                    "Chilly",
+                    "Carrot"
+                ],
+                "electronics_item": [
+                    "computer",
+                    "mouse",
+                    "keyword"
+                ]
+            },
+            "quantity": 6,
+            "status": "completed",
+            "quality_rating": 7.0,
+            "issue_date": "2023-12-09T14:31:13.761258Z",
+            "acknowledgment_date": "2023-12-09T08:59:20.281455Z"
+        },
+    ],
+    "extra_information": {}
+}
+
+### 8: Specific Product Order Details
+Specific Product Order Details:
+##### URL: [http://127.0.0.1:8000/api/purchase-orders/](http://127.0.0.1:8000/api/purchase-orders/?po-number=PO316433673163031889464686993295049691891)
+##### Method: GET
+###### Ex: Response:{
+    "is_authenticated": false,
+    "status": 200,
+    "message": "Product Details.",
+    "data": {
+        "po_number": "PO316433673163031889464686993295049691891",
+        "vendor": "shubham",
+        "order_date": "2023-12-08T11:21:26.196016Z",
+        "delivery_date": null,
+        "items": {
+            "vegitables": [
+                "Chilly",
+                "Carrot"
+            ],
+            "electronics_item": [
+                "computer",
+                "mouse",
+                "keyword"
+            ]
+        },
+        "quantity": 50,
+        "status": "pending",
+        "quality_rating": 5.0,
+        "issue_date": null,
+        "acknowledgment_date": "2023-12-09T09:43:52.128501Z"
+    },
+    "extra_information": {}
+}
+
