@@ -21,6 +21,7 @@
 # APIs Docs.
 
 ### Get Vendor List
+To retrieve a list of all vendors:
 ##### URL: http://127.0.0.1:8000/api/vendor/
 ###### Ex: {
     "is_authenticated": false,
