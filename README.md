@@ -22,8 +22,7 @@
 
 ### Get Vendor List
 ##### URL: http://127.0.0.1:8000/api/vendor/
-Ex: 
-  {
+###### Ex: {
     "is_authenticated": false,
     "status": 200,
     "message": "Vendor List",
