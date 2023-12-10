@@ -269,3 +269,112 @@ Specific Product Order Details:
     "extra_information": {}
 }
 
+
+### 9: Create Product Order Details
+Specific Product Order Details:
+##### URL: http://127.0.0.1:8000/api/purchase-orders/
+##### Method: POST
+###### Ex: BODY: {
+    "vendor_code":"shubham",
+    "po_id": "PO331195806869265469920819167642994109593"
+} 
+###### Response:{
+    "is_authenticated": false,
+    "status": 200,
+    "message": "Product Details.",
+    "data": {
+        "po_number": "PO316433673163031889464686993295049691891",
+        "vendor": "shubham",
+        "order_date": "2023-12-08T11:21:26.196016Z",
+        "delivery_date": null,
+        "items": {
+            "vegitables": [
+                "Chilly",
+                "Carrot"
+            ],
+            "electronics_item": [
+                "computer",
+                "mouse",
+                "keyword"
+            ]
+        },
+        "quantity": 50,
+        "status": "pending",
+        "quality_rating": 5.0,
+        "issue_date": null,
+        "acknowledgment_date": "2023-12-09T09:43:52.128501Z"
+    },
+    "extra_information": {}
+}
+
+### 10: Create Product Order Details
+Update Product Order Details:
+##### URL: http://127.0.0.1:8000/api/purchase-orders/
+##### Method: PATCH
+###### Ex: BODY: {
+    "vendor_code": "shubham",
+    "delivery_date": "2023-12-10 06:56:41.571828",
+    "po_number": "PO331195806869265469920819167642994109593",
+    "status": "completed",
+    "on_time_delivery_date": "2023-12-10 08:56:41.571828"
+}
+###### Response:{
+    "is_authenticated": false,
+    "status": 202,
+    "message": "Product order track has been successfully updated.",
+    "data": {
+        "po_number": "PO331195806869265469920819167642994109593",
+        "vendor": "shubham",
+        "order_date": "2023-12-10T05:53:13.612304Z",
+        "delivery_date": "2023-12-10T06:56:41.571828Z",
+        "on_time_delivery_date": "2023-12-10T08:56:41.571828Z",
+        "items": {
+            "vegitables": [
+                "Chilly",
+                "Carrot"
+            ],
+            "electronics_item": [
+                "computer",
+                "mouse",
+                "keyword"
+            ]
+        },
+        "quantity": 30,
+        "status": "completed",
+        "quality_rating": 8.0,
+        "issue_date": "2023-12-10T05:56:41.571828Z",
+        "acknowledgment_date": "2023-12-10T05:55:41.571828Z"
+    },
+    "extra_information": {}
+}
+
+
+### 11: Create Product Order Details
+Delete Product Order Details:
+##### URL: http://127.0.0.1:8000/api/purchase-orders/?po-number=PO12947992029633862152382849040421254434
+##### Method: DELETE
+###### Ex: Response:{
+    "is_authenticated": false,
+    "status": 200,
+    "message": "Product order track has been deleted.",
+    "data": {},
+    "extra_information": {}
+}
+
+
+### 12: Create Product Order Details
+API view to handle the acknowledgment of product delivery by a vendor for a specific purchase order.
+
+##### URL: http://127.0.0.1:8000/api/purchase-orders/PO331195806869265469920819167642994109593/acknowledge/
+##### Method: POST
+###### Ex: BODY: {
+    "vendor_code":"shubham",
+    "po_id": "PO331195806869265469920819167642994109593"
+}
+###### Response:{
+    "is_authenticated": false,
+    "status": 200,
+    "message": "Vendor acknowledged product successfully.",
+    "data": {},
+    "extra_information": {}
+}
