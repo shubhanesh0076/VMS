@@ -362,7 +362,7 @@ Delete Product Order Details:
 }
 
 
-### 12: Create Product Order Details
+### 12: Acknowledge Product Order.
 API view to handle the acknowledgment of product delivery by a vendor for a specific purchase order.
 
 ##### URL: http://127.0.0.1:8000/api/purchase-orders/PO331195806869265469920819167642994109593/acknowledge/
